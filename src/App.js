@@ -10,8 +10,7 @@ const cars = [];
   
 
 for(let i = 0; i < data.data.length; i++) {
-    const car = data.data[i]
-    console.log(car)
+  const car = data.data[i]
       cars.push(car);
   
   }
@@ -27,10 +26,14 @@ for(let i = 0; i < data.data.length; i++) {
         <GridContainer>
           {cars.map((car) => (
             <CarCard
+            condition={car.advert_classification}
               title={car.plate + " " + car.make + " " + car.model}
               image={Logo}
               content={car.derivative}
               price={'£' + car.price}
+              mileage={car.odometer_value + " " + car.odometer_units}
+              body={car.body_type}
+              transmission={car.transmission}
             />
           ))}
         </GridContainer>

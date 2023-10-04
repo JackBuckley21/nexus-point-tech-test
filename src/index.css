@@ -35,8 +35,36 @@ width: 33%;
   max-width: 333px;
   height: 364px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 16px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.carCard-condition button {
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  width: 57;
+  height: 29;
+  background-color: #3F3A50;
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
+
+.carCard-tag button {
+  background-color: #3F3A50;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  z-index: 1;
+  justify-content: space-between;
+  top: 195px;
+  left: 10px;
+  position: relative;
 }
 
 .carCard-content {
@@ -44,28 +72,47 @@ width: 33%;
 }
 
 .carCard-content h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   text-align: left;
   position: sticky;
 }
 
-.carCard-content p {
+.carCard-content h4 {
   font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  
 }
+
+.carCard-content p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #55595D;
+}
+
 
 .carCard-img{
   position: relative;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   width: 333px;
   height: 220px;
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-left: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10%;
+  max-width:1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    padding-left: 0%;
+  }
 }
 
 * {
